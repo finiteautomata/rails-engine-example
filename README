@@ -1,0 +1,17 @@
+1) Los Engines pueden ser considerados como "subaplicaciones" dentro de una aplicación más grande. De hecho, una aplicación Rails comparte muchísima funcionalidad con un Engine, con lo cual "son casi lo mismo"
+
+
+Creamos un engine
+
+$ rails plugin --help
+Ver las opciones
+
+$ rails plugin new mathmath --full --mountable --skip-test-unit --dummy-path=spec/dummy
+
+2) En engine.rb podemos observar
+
+isolate_namespace Mathmath
+
+"The isolate_namespace method here deserves special notice. This call is responsible for isolating the controllers, models, routes and other things into their own namespace, away from similar components inside the application"
+
+3) El Gemfile y gemspec son idénticos a los de una gema, como explicó Luis en su momento
